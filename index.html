@@ -1,0 +1,29 @@
+import javax.swing.*;
+import javax.swing.border.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
+import java.util.*;
+
+/**
+ * FIND - PUZZLE
+ * Java Swing version: SOLO picture puzzle, 2x2 or 3x3.
+ * Choose an image, then swap the pieces until the picture is in order.
+ *
+ * Run:
+ *   javac FindPuzzle.java
+ *   java FindPuzzle
+ */
+public class FindPuzzle extends JFrame {
+    private final Color bg = new Color(17, 24, 39);
+    private final Color panelColor = new Color(49, 46, 129);
+    private final Color gold = new Color(245, 158, 11);
+
+    private BufferedImage sourceImage;
+    private int size = 2;
+    private int[] pieces;
+    private JButton[] tiles;
+    private int selected = -1;
+    
